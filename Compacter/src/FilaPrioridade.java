@@ -9,8 +9,7 @@ public class FilaPrioridade {
         contador = 0;
     }
 
-    public void enqueue(String valor, int prioridade) {
-        No novo = new No(valor,prioridade);
+    public void enqueue(No novo) {
         int flag = 0;
         if (primeiro == null) {  // Lista vazia?
             primeiro = novo;

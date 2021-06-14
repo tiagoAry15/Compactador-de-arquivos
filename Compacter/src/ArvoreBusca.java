@@ -5,42 +5,42 @@ public class ArvoreBusca {
     public ArvoreBusca(){
         this.raiz = null;
     }
-/*
-    public void adicionar(String elemento){
+
+    public void adicionar(No novo){
         if(vazio()){
-            this.raiz = new No(elemento,null);
+            this.raiz = novo;
         }else{
-            adicionar(elemento, raiz);
+            adicionar(novo);
         }
     }
 
- */
 
-    /*
-    public void adicionar(String elemento, No ramo, ){
-        if(elemento < ramo.dado){
+
+
+    public void adicionar(No novo, No ramo){
+        if(novo.prioridade < ramo.prioridade){
             if(ramo.Esquerdo == null){
-                ramo.Esquerdo = new No(elemento,ramo);
+                ramo.Esquerdo = novo;
             }else{
-                adicionar(elemento, ramo.Esquerdo);
+                adicionar(novo, ramo.Esquerdo);
             }
 
-        }else if(elemento > ramo.dado){
+        }else if(novo.prioridade > ramo.prioridade){
             if(ramo.Direito == null){
-                ramo.Direito = new No(elemento,ramo);
+                ramo.Direito =  novo;
             }else{
-                adicionar(elemento, ramo.Direito);
+                adicionar(novo);
             }
 
         }else{
-            ramo.contador++;
+            ramo.prioridade++;
         }
 
 
 
     }
 
-     */
+
 
     public boolean vazio(){
         return raiz == null;
