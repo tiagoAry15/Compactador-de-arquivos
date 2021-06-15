@@ -1,5 +1,5 @@
 public class ArvoreBusca {
-    private No raiz;
+    public No raiz;
 
 
     public ArvoreBusca(){
