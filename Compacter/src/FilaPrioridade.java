@@ -22,6 +22,13 @@ public class FilaPrioridade {
             primeiro = novo;
 
         }
+        else if(novo.prioridade == primeiro.prioridade){
+
+            novo.proximo = primeiro;
+            primeiro.anterior = novo;
+            primeiro = novo;
+
+        }
         else if (novo.prioridade >= ultimo.prioridade) {
             ultimo.proximo = novo;
             novo.anterior = ultimo;
@@ -30,9 +37,10 @@ public class FilaPrioridade {
         else{
             No aux = primeiro;
 
-            while (aux != null && novo.prioridade >= aux.prioridade){
+            while (aux != null && novo.prioridade >= aux.prioridade  ) { //&& novo.dado.charAt(0) > aux.dado.charAt(0)
                 aux = aux.proximo;
             }
+
             novo.proximo = aux;
             novo.anterior = aux.anterior;
             aux.anterior = novo;
@@ -72,7 +80,7 @@ public class FilaPrioridade {
         No aux = primeiro;
 
         while (aux != null) {
-            System.out.println(aux.dado);
+            System.out.println(aux.dado + " " + aux.prioridade);
 
             aux = aux.proximo;
         }
